@@ -52,6 +52,12 @@ jobs:
           echo "Mi usuario es: ${{env.user}}"
           echo "Mi contraseña es: ${{env.password}}"
 
+      # VARIABLES ABIERTAS
+      - name: Variables Abiertas
+        run: |
+          echo "Version del Proyecto: ${{ vars.VERSIONDEMIPROYECTO }}"
+              
+
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
