@@ -20,6 +20,10 @@ jobs:
       nombre: "Jean"
       apellidos: "Celiz Paredes"
       edad: 34
+
+      user: ${{ secrets.USER }}
+      password: ${{ secrets.PASSWORD }}
+
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -41,6 +45,14 @@ jobs:
         run: 
           echo "Impresion de Mis Datos Generales"
           echo "Carrera Ingenieria de Sistemas"
+
+      # IMPRESION DE VARIABLES SECRETAS
+      - name: variable de entorno secreto
+        run: 
+          echo "Mi usuario es : ${{ env.user }}"
+          echo "Mi contraseña es : ${{ env.password }}"
+
+      
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
