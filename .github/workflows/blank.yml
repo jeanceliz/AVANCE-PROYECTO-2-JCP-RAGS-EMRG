@@ -36,6 +36,11 @@ jobs:
           echo "mi apellido es: ${{ env.apellidos }}"
           echo "mi edad es: ${{  env.edad }}"
 
+      # Mis datos generales
+      - name: datos generales
+        run: 
+          echo "Impresion de Mis Datos Generales"
+          echo "Carrera Ingenieria de Sistemas"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
