@@ -16,6 +16,10 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    env:
+      nombre: "Jean"
+      apellidos: "Celiz Paredes"
+      edad: 34
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -23,6 +27,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+
+      # Mi Presentacion
+      - name: Presentacion
+        run: |
+          echo "Impresion de mi presentacion:"
+          echo "mi nombre es: ${{ env.nombre }}"
+          echo "mi apellido es: ${{ env.apellidos }}"
+          echo "mi edad es: ${{  env.edad }}"
+
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
